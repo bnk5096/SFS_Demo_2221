@@ -33,6 +33,8 @@ def get_value(hand):
     results = list(set(results))
     results.sort()
     for i in range(len(results)):
+        if i > len(results) - 1:
+            continue
         if results[i] > 21:
             results = results[:i]
     return results
